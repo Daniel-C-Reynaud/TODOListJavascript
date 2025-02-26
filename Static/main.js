@@ -1,35 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-   const icones = document.querySelectorAll('aside ul li i');
-   let iconeSelecionado = null; // Variável para rastrear o ícone selecionado atualmente
+const itens = window.document.querySelectorAll(" aside ul li i ")
 
-   icones.forEach(icone => {
-      icone.addEventListener('click', function () {
-         // Remove a classe do ícone anteriormente selecionado, se houver
-         if (iconeSelecionado) {
-            iconeSelecionado.classList.remove('icone-selecionado');
-         }
+let iconeSelecionado = null
+for (let item of itens) {
+   item.addEventListener("click", function () {
+      item.classList.add("icone-selecionado")
 
-         // Adiciona a classe ao ícone clicado
-         this.classList.add('icone-selecionado');
+      if (iconeSelecionado && iconeSelecionado !== item) {
+         iconeSelecionado.classList.remove("icone-selecionado")
+      }
 
-         // Atualiza o ícone selecionado
-         iconeSelecionado = this;
+      item.classList.add("icone-selecionado")
 
-         console.log('Ícone clicado:', this.classList);
-
-         if (this.classList.contains('fa-house')) {
-            console.log('Ícone da casa clicado!');
-         } else if (this.classList.contains('fa-chart-simple')) {
-            console.log('Ícone do gráfico clicado!');
-         } else if (this.classList.contains('fa-calendar-days')) {
-            console.log('Ícone do gráfico clicado!');
-         } else if (this.classList.contains('fa-bolt')) {
-            console.log('Ícone do gráfico clicado!');
-         } else if (this.classList.contains('fa-bell')) {
-            console.log('Ícone do gráfico clicado!');
-         } else if (this.classList.contains('fa-gear')) {
-            console.log('Ícone do gráfico clicado!');
-         }
-      });
-   });
-});
+      iconeSelecionado = item
+   })
+   
+}
