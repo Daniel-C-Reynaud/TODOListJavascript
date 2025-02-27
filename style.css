@@ -1,0 +1,159 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Poppins;
+}
+
+body {
+   background-color: #ffffff;
+   margin-bottom: 200px;
+}
+
+body>h1 {
+   text-align: center;
+   margin-top: 100px;
+}
+
+.header {
+   background-image: url("https://img.freepik.com/fotos-premium/superficie-de-madeira-vazia-com-fundo-de-piscina-de-hotel-de-viagens-de-verao-generative-ai_601748-44856.jpg");
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+   padding: 30px 50px;
+   text-align: center;
+}
+
+.header>h1 {
+   margin-top: 10%;
+   font: 800 70px Poppins;
+   text-shadow: 0 0 20px black;
+   color: #fff;
+}
+
+.header>p {
+   text-transform: capitalize;
+   color: #fff;
+   font: 400 40px Poppins;
+   text-shadow: 0 0 8px black;
+}
+
+.container {
+   background-color: #fff;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 20px;
+   color: rgb(199, 117, 151);
+}
+
+.search-box {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 50px;
+   color: rgb(199, 117, 151);
+   width: 230px;
+   border: 1px solid rgb(199, 117, 151);
+   border-radius: 10px;
+}
+
+.search-input {
+   width: 70%;
+   padding: 10px;
+   height: 100%;
+   border: none;
+   color: rgb(199, 117, 151);
+   font-size: 25px;
+}
+
+.search-input::placeholder {
+   color: rgb(199, 117, 151);
+}
+
+.search-input:focus {
+   outline: none;
+}
+
+.nav>ul {
+   list-style: none;
+
+   display: flex;
+   gap: 60px;
+   font: 600 30px Poppins;
+   text-transform: uppercase;
+}
+
+.nav>ul>li {
+   display: flex;
+   align-items: center;
+}
+
+.nav>ul>li>i {
+   font-size: 40px;
+   margin-right: 20px;
+}
+
+.nav>ul>li:hover {
+   color: rgb(163, 96, 124);
+   transform: scale(0.9);
+   transition: color 0. ease-out;
+   transition: transform 0.4s ease-out;
+}
+
+.nav>ul>li:not(:hover) {
+   transition: border-bottom 0.1s;
+   transform: scale(1);
+   transition: color 0.4s ease-out;
+   transition: transform 0.4s ease-out;
+}
+
+.rent-room>article {
+   border-bottom-left-radius: 0;
+   background-color: rgba(199, 117, 151, 0.403);
+   border-radius: 25px;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   color: rgb(116, 81, 96);
+   box-shadow: 0 0 15px rgba(0, 0, 0, 0.198);
+}
+
+.rent-room>article:hover {
+   scale: 0.95;
+   transition: 0.4s ease-out;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.628);
+}
+
+.rent-room>article:not(:hover) {
+   scale: 1;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.326);
+   transition: 0.4s ease-in;
+}
+
+.rent-room>article>img {
+   width: 450px;
+   height: 250px;
+   border-radius: 25px;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
+.rent-room p {
+   display: block;
+   margin: 0 10px 20px 20px;
+   font-weight: 600;
+}
+
+.rent-room h3 {
+   text-transform: capitalize;
+   font-size: 30px;
+   margin: 10px 10px 0px 20px;
+   display: block;
+}
+
+.rent-room {
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: 30px;
+}
