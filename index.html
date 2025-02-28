@@ -1,53 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://kit.fontawesome.com/b9a4adc7c3.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-   <title>Aluguel de Quartos</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <script src="https://kit.fontawesome.com/b9a4adc7c3.js" crossorigin="anonymous"></script>
+
+   <title>To Do List</title>
 </head>
+
 <body>
-   <header class="header">
-      <div class="container">
-         <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Pesquisar" class="search-input">
-         </div>
-         <nav class="nav">
-            <ul>
-               <li><i class="fa-solid fa-house"></i>home</li>
-               <li><i class="fa-solid fa-compass"></i>rent</li>
-               <li><i class="fa-solid fa-circle-user"></i>profile</li>
+   <nav class="sidebar">
+      <ul>
+         <li class="logo">
+            <h3>Dober To Do List</h3>
+         </li>
+         <li class="list-button">
+            <button class="drop-button">
+               <span class="material-icons">checklist</span>
+               <p>My Lists</p>
+               <span class="material-icons arrows">keyboard_arrow_down</span>
+            </button>
+            <ul class="sub-itens">
+               <li class="item">
+                  <a href="#">New List
+                  </a>
+               </li>
+               <li class="item">
+
+                  <a href="#">List 1
+                  </a>
+               </li>
+               <li class="item">
+
+                  <a href="#">List 2
+                  </a>
+               </li>
             </ul>
-         </nav>
+         </li>
+         <li class="list-button">
+            <button class="drop-button">
+               <span class="material-icons">check_box</span>
+               <p>Completed</p>
+               <span class="material-icons arrows">keyboard_arrow_down</span>
+            </button>
+            <ul class="sub-itens">
+               <li class="item">
+                  <a href="#">
+                     List 1
+                  </a>
+               </li>
+               <li class="item">
+                  <a href="#">
+                     List 2
+                  </a>
+               </li>
+               <li class="item">
+                  <a href="#">
+                     List 3
+                  </a>
+               </li>
+            </ul>
+         </li>
+         <li class="list-button">
+            <button class="no-arrow-button">
+               <span class="material-icons">settings</span>
+               <p>Settings</p>
+            </button>
+         </li>
+         <li class="list-button">
+            <a href="about.html">
+               <button class="no-arrow-button">
+                  <span class="material-icons">more</span>
+                  <p>About Me</p>
+               </button>
+            </a>
+         </li>
+      </ul>
+   </nav>
+   <main>
+      <div class="overlay"></div>
+      <section class="settings-menu">
+         <h1>Settings</h1>
+         <div class="text-holder">
+            <h1>Light Mode</h1>
+            <p>toggle the theme to dark and light mode</p>
+         </div>
+         <input type="checkbox" class="cb" id="theme">
+         <div class="text-holder">
+            <h1>Blue Color</h1>
+            <p>toggle the predominant color to blue</p>
+         </div>
+         <input type="checkbox" class="cb" id="blue">
+      </section>
+      <div class="list-container">
+         <section class="container">
+            <h3>ADD TO LIST</h3>
+            <input class="text-adder" type="item-name" placeholder="Today i Will...">
+         </section>
+         <button class="add-list-item">ADD ITEM</button>
       </div>
-      <h1>ALUGUEL DE HOTEIS</h1>
-      <p>tudo em um só click!</p>
-   </header>
-
-   <h1>Aluguel de Quartos</h1>
-   <section class="rent-room">
-      <article class="room-1">
-         <img src="https://media-cdn.tripadvisor.com/media/photo-s/13/43/ca/a0/hotel-fundo-san-rafael.jpg">
-         <h3>quarto 1</h3>
-         <p>com piscinam dois quartos e tres banheiros</p>
-      </article>
-      <article class="room-2">
-         <img src="https://www.turishotelpassofundo.com.br/img_fotos/img_54.jpg">
-         <h3>quarto 2</h3>
-         <p>quarto com 3 comodos e dois banheiros</p>
-      </article>
-      <article class="room-3">
-         <img src="https://id.riograndedosulhotels.net/data/Images/OriginalPhoto/16256/1625615/1625615613/image-passo-fundo-id-hotel-1.JPEG">
-         <h3>quarto 3</h3>
-         <p>quarto com 1 banheiro com zona de alimentação<br>self service</p>
-      </article>
-   </section>
-
-   <footer class="footer">
-
-   </footer>
+   </main>
+   <script src="main.js"></script>
 </body>
+
 </html>

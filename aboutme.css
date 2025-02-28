@@ -1,0 +1,67 @@
+:root {
+   --main-color: #1f1f1f;
+   --line-color: #313131;
+   --text-color: #ffffff;
+   --sec-text-color: #a5a5a5;
+   --accent-color: #fd8585;
+   --sec-accent-color: #c45353;
+   --background-color: #858585;
+   --shadow-color: #ffffff1e;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+   background-color: var(--main-color);
+   display: flex;
+   flex-direction: column;
+   color: var(--text-color);
+   justify-content: center;
+   align-items: center;
+   height: 100dvh;
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 10px;
+}
+.about {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 400px;
+   border: 2px solid var(--line-color);
+   height: 200px;
+   padding: 30px;
+   border-radius: 10px 10px 10px 0;
+   box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.about>h1 {
+   line-height: 3em;
+}
+
+button {
+   border: none;
+   border-radius: 0px 0px 5px 5px;
+   background-color: var(--sec-accent-color);
+   font-size: 20px;
+   font-weight: 700;
+   height: 40px;
+   width: 80px;
+   box-shadow: 0 0 10px var(--shadow-color);
+}
+
+button>a {
+   color: var(--text-color);
+   text-decoration: none;
+}
