@@ -23,6 +23,7 @@ body {
    display: grid;
    grid-template-columns: auto 1fr;
    position: relative;
+   transition: background 0.6s;
 }
 
 body.dark-mode {
@@ -280,17 +281,19 @@ main {
 
 .overlay {
    position: absolute;
-   display: none;
+   z-index: -3;
    height: 100%;
    width: 100dvw;
    top: 0;
    left: 0;
+   background-color: #00000000;
 }
 
 .overlay.show-settings {
    display: block;
    z-index: 1;
    background-color: #00000075;
+   transition: background-color 0.4s;
 }
 
 .settings-menu>h1 {
