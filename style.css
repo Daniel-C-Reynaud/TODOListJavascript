@@ -3,8 +3,8 @@
    --line-color: #313131;
    --text-color: #ffffff;
    --sec-text-color: #a5a5a5;
-   --accent-color: #fd8585;
-   --sec-accent-color: #c45353;
+   --accent-color: #ff6f6f;
+   --sec-accent-color: #c33d3d;
    --background-color: #858585;
    --shadow-color: #ffffff1e;
 }
@@ -23,7 +23,6 @@ body {
    display: grid;
    grid-template-columns: auto 1fr;
    position: relative;
-   transition: background 0.6s;
 }
 
 body.dark-mode {
@@ -31,13 +30,10 @@ body.dark-mode {
    --line-color: #b8b8b8;
    --text-color: #1a1a1a;
    --sec-text-color: #606060;
+   --accent-color: #fd8585;
+   --sec-accent-color: #c45353;
    --background-color: #a5a5a5;
    --shadow-color: #0000006c;
-}
-
-body.blue-accent {
-   --accent-color: #708dff;
-   --sec-accent-color: #4361c5;
 }
 
 a {
@@ -45,15 +41,17 @@ a {
 }
 
 .sidebar {
-   height: 100vh;
+   height: 97.9vh;
    width: 250px;
    border-right: 2px solid var(--line-color);
+   position: sticky;
+   padding: 10px 0;
+   top: 0;
 }
 
 .sidebar>ul {
-   height: 100%;
-   padding: 10px;
-   height: 97dvh;
+   height: 98dvh;
+   padding: 0 10px;
 }
 
 .logo {
@@ -181,6 +179,7 @@ main {
 .settings-menu {
    display: grid;
    grid-template-columns: 4fr 70px;
+   grid-template-rows: 200PX 0;
    grid-auto-rows: auto;
    padding: 40px;
    width: 800px;
@@ -195,6 +194,7 @@ main {
    z-index: 3;
    top: -1000px;
    transition: top 0.4s ease-in-out;
+   box-shadow: 0 0 40px var(--shadow-color);
 }
 
 .settings-menu.show-settings {
@@ -257,6 +257,7 @@ main {
 
 .cb:checked {
    background-color: var(--accent-color);
+   border: 2px solid var(--accent-color);
 }
 
 #other::after {
@@ -315,7 +316,7 @@ main {
 
 .container {
    width: 400px;
-   height: 200px;
+   height: 150px;
    padding: 20px;
    background-color: var(--main-color);
    border: 2px solid var(--line-color);
@@ -343,7 +344,7 @@ main {
    outline: none;
 }
 
-.add-list-item {
+.action-button {
    width: 444px;
    height: auto;
    padding: 50px 20px;
@@ -353,12 +354,12 @@ main {
    color: var(--text-color);
    font-size: 50px;
    font-weight: 700;
-   transition: background-color 0.2s;
-   transition: font-size 0.2s;
+   transition: background-color 0.4s;
+   transition: font-size 0.4s;
    box-shadow: 0 0 10px var(--shadow-color);
 }
 
-.add-list-item.clickAdd {
+.action-button.clicked {
    background-color: var(--sec-accent-color);
    font-size: 48px;
 }

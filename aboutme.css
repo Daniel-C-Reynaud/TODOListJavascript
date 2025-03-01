@@ -28,12 +28,27 @@ body {
    height: 100dvh;
 }
 
+body.dark-mode {
+   --main-color: #e4e4e4;
+   --line-color: #b8b8b8;
+   --text-color: #1a1a1a;
+   --sec-text-color: #606060;
+   --background-color: #a5a5a5;
+   --shadow-color: #0000006c;
+}
+
+body.blue-accent {
+   --accent-color: #708dff;
+   --sec-accent-color: #4361c5;
+}
+
 main {
    display: flex;
    flex-direction: column;
    justify-content: center;
    gap: 10px;
 }
+
 .about {
    display: flex;
    flex-direction: column;
@@ -42,7 +57,7 @@ main {
    border: 2px solid var(--line-color);
    height: 200px;
    padding: 30px;
-   border-radius: 10px 10px 10px 0;
+   border-radius: 20px 20px 7px 7px;
    box-shadow: 0 0 10px var(--shadow-color);
 }
 
@@ -52,16 +67,33 @@ main {
 
 button {
    border: none;
-   border-radius: 0px 0px 5px 5px;
-   background-color: var(--sec-accent-color);
+   border-radius: 7px 7px 20px 20px;
+   background-color: var(--accent-color);
+   border: 2px solid var(--sec-accent-color);
    font-size: 20px;
    font-weight: 700;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    height: 40px;
-   width: 80px;
+   width: 464px;
    box-shadow: 0 0 10px var(--shadow-color);
+   padding: 50px;
+   transition: backgrund-color 0.4s;
+   transition: font-size 0.4s;
 }
 
-button>a {
+a>button,
+a {
+   text-decoration: none;
    color: var(--text-color);
    text-decoration: none;
+   width: 100%;
+   cursor: pointer;
+   user-select: none;
+}
+
+.action-button.clicked {
+   background-color: var(--sec-accent-color);
+   font-size: 1em;
 }

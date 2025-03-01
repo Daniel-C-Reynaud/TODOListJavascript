@@ -4,25 +4,34 @@ const showButtons = document.querySelectorAll(".drop-button")
 const arrowButtons = document.querySelectorAll(".arrows")
 const noArrowButtons = document.querySelectorAll(".no-arrow-button")
 const configButton = noArrowButtons[0]
-const aboutButton = noArrowButtons[1]
 const settingsMenu = document.querySelector(".settings-menu")
-const buttonAddItem = document.querySelector(".add-list-item")
+const buttonActionColor = document.querySelector(".action-button")
 const currentList = document.querySelector(".container")
 const overlay = document.querySelector(".overlay")
+const theme = checkBoxes[0]
 
-buttonAddItem.addEventListener("click", () => {
-   buttonAddItem.classList.add("clickAdd")
+let isDark = localStorage.getItem("isDark") === "true"
+
+if (isDark) {
+   document.body.classList.add("dark-mode")
+   theme.checked = true
+}
+
+buttonActionColor.addEventListener("click", () => {
+   buttonActionColor.classList.add("clicked")
 
    setTimeout(() => {
-      buttonAddItem.classList.remove("clickAdd")
-   }, 100);
+      buttonActionColor.classList.remove("clicked")
+   }, 100)
 })
+
 
 configButton.addEventListener("click", () => {
    settingsMenu.classList.toggle("show-settings")
    overlay.classList.toggle("show-settings")
 })
-   overlay.addEventListener("click", () => {
+
+overlay.addEventListener("click", () => {
    settingsMenu.classList.remove("show-settings")
    overlay.classList.remove("show-settings")
 })
@@ -41,16 +50,19 @@ showButtons.forEach((button, index) => {
    })
 })
 
-checkBoxes.forEach((chechBox) => {
-   chechBox.addEventListener("click", () => {
-      chechBox.classList.toggle("checked");
-   })
-})
+function updateThemeAndAccent() {
 
-checkBoxes[0].addEventListener("click", () => {
-   document.body.classList.toggle("dark-mode");
-})
+   if (isDark) {
+      document.body.classList.add("dark-mode");
+   } else {
+      document.body.classList.remove("dark-mode");
+   }
+}
 
-checkBoxes[1].addEventListener("click", () => {
-   document.body.classList.toggle("blue-accent");
-})
+theme.addEventListener("click", () => {
+   isDark = !isDark;
+   localStorage.setItem("isDark", isDark);
+   updateThemeAndAccent();
+});
+
+updateThemeAndAccent()
