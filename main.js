@@ -1,5 +1,4 @@
 const checkBoxes = document.querySelectorAll(".cb")
-const lists = document.querySelectorAll(".sub-itens")
 const showButtons = document.querySelectorAll(".drop-button")
 const arrowButtons = document.querySelectorAll(".arrows")
 const noArrowButtons = document.querySelectorAll(".button")
@@ -12,6 +11,9 @@ const theme = checkBoxes[0]
 const inputText = document.querySelector(".text-adder")
 const inputAddItem = document.querySelector(".add-item")
 const taskHolder = document.querySelector(".task-holder")
+const hambMenu = document.querySelector(".open-menu")
+const sideBar = document.querySelector(".sidebar")
+const sideBarUl = document.querySelector(".side-content")
 
 let isDark = localStorage.getItem("isDark") === "true"
 
@@ -19,6 +21,10 @@ if (isDark) {
    document.body.classList.add("dark-mode")
    theme.checked = true
 }
+
+hambMenu.addEventListener("click", () => {
+   sideBarUl.classList.toggle("show-menu")
+})
 
 buttonActionColor.addEventListener("click", () => {
    buttonActionColor.classList.add("clicked")
@@ -29,8 +35,8 @@ buttonActionColor.addEventListener("click", () => {
 })
 
 configButton.addEventListener("click", () => {
-   settingsMenu.classList.toggle("show-settings")
-   overlay.classList.toggle("show-settings")
+   settingsMenu.classList.add("show-settings")
+   overlay.classList.add("show-settings")
 })
 
 overlay.addEventListener("click", () => {

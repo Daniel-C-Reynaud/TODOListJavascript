@@ -70,13 +70,13 @@ button {
    border-radius: 7px 7px 20px 20px;
    background-color: var(--accent-color);
    border: 2px solid var(--sec-accent-color);
-   font-size: 20px;
+   font-size: min(2rem, 1rem);
    font-weight: 700;
    display: flex;
    justify-content: center;
    align-items: center;
    height: 40px;
-   width: 464px;
+   width: min(464px, 100%);
    box-shadow: 0 0 10px var(--shadow-color);
    padding: 50px;
    transition: backgrund-color 0.4s;
@@ -96,4 +96,25 @@ a {
 .action-button.clicked {
    background-color: var(--sec-accent-color);
    font-size: 1em;
+}
+
+@media screen and (max-width: 760px) {
+   .action-button {
+      box-shadow: none;
+      width: 100dvw;
+      border: none;
+      border-radius: 0;
+   }
+
+   .about, main {
+      box-sizing: border-box;
+      box-shadow: none;
+      width: 100dvw;
+      border: none;
+   }
+
+   .about {
+      padding: 30px;
+      margin-bottom: 30px;
+   }
 }
