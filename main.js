@@ -37,6 +37,7 @@ buttonActionColor.addEventListener("click", () => {
 configButton.addEventListener("click", () => {
    settingsMenu.classList.add("show-settings")
    overlay.classList.add("show-settings")
+   sideBarUl.classList.remove("show-menu")
 })
 
 overlay.addEventListener("click", () => {

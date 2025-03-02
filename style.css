@@ -454,7 +454,7 @@ li span {
 
    .overlay {
       width: 100dvw;
-      height: 100dvh;
+      height: 100%;
       z-index: -2;
    }
 
